@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="LevelManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="UIManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Cursur.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuLevel.cpp">
+      <Filter>Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="Fade.cpp">
+      <Filter>Levels\Fade</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseCharacter.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Wall.cpp">
+      <Filter>Levels\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Floor.cpp">
+      <Filter>Levels\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="IntroLevel.cpp">
+      <Filter>Levels\MenuLevels</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>UI\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>UI\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="VillageLevel.cpp">
+      <Filter>Levels\Village</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfileLevel.cpp">
+      <Filter>Levels\Profile</Filter>
+    </ClCompile>
+    <ClCompile Include="GameExitMenu.cpp">
+      <Filter>UI\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingMenu.cpp">
+      <Filter>UI\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioMenu.cpp">
+      <Filter>UI\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Sliderbutton.cpp">
+      <Filter>UI\Button</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="LevelManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="UIManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Cursur.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuLevel.h">
+      <Filter>Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="Fade.h">
+      <Filter>Levels\Fade</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseCharacter.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Wall.h">
+      <Filter>Levels\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Floor.h">
+      <Filter>Levels\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="IntroLevel.h">
+      <Filter>Levels\MenuLevels</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="MainMenu.h">
+      <Filter>UI\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="VillageLevel.h">
+      <Filter>Levels\Village</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfileLevel.h">
+      <Filter>Levels\Profile</Filter>
+    </ClInclude>
+    <ClInclude Include="GameExitMenu.h">
+      <Filter>UI\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingMenu.h">
+      <Filter>UI\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioMenu.h">
+      <Filter>UI\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>UI\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="Sliderbutton.h">
+      <Filter>UI\Button</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Managers">
+      <UniqueIdentifier>{edc3d152-6f37-4371-b97b-1fe8d79dbdd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{07cd1d4e-83ff-4686-8b2e-58134394b65f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character">
+      <UniqueIdentifier>{cd44e880-5900-411e-bcb6-e0173b89164d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels">
+      <UniqueIdentifier>{59bd7f46-7888-47e0-87fc-b21396f938e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\Fade">
+      <UniqueIdentifier>{f59a4b0f-e2ed-41d0-8118-d6ce8105d7a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\Objects">
+      <UniqueIdentifier>{d5e2866d-6be9-42b7-9e00-6523cef47b29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\MenuLevels">
+      <UniqueIdentifier>{8e29c218-0f97-4e84-bdaf-cb7002c9913b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Button">
+      <UniqueIdentifier>{27862787-0525-4d5c-9ecb-9697359407f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\Dungeon">
+      <UniqueIdentifier>{d6075dca-b794-4c68-b1f7-e5447e285cb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\Village">
+      <UniqueIdentifier>{05c411ca-f25a-4192-9ca8-1cbfa56de384}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\Profile">
+      <UniqueIdentifier>{97fa7c7a-c12f-4c62-9d8f-7e56446c5e9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Menus">
+      <UniqueIdentifier>{0bd134c7-b52e-4b64-8995-6adf338d5e02}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Game2.rc" />
+  </ItemGroup>
+</Project>
