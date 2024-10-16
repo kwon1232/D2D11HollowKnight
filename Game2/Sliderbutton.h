@@ -16,9 +16,14 @@ public:
 	virtual void LateUpdate();
 	virtual void Render();
 
+	ObRect* col;
 	Button* sliderBnt;
 	ObImage* sliderIm;
 	ObImage* sliderBgIm;
 	ObImage* numIm[11];
+
+	bool isVisible;
+
+	void SetSliderPos();
 };
 

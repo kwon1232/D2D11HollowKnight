@@ -137,16 +137,16 @@ void SettingMenu::LateUpdate()
 
 void SettingMenu::CollideWithMouse()
 {
-	if (uiManager->cursur->col->Intersect(gameSettingBnt->col) && collisionState != EGameSettingCollisionState::GameSetting)
+	if (uiManager->cursur->col->Intersect(gameSettingBnt->col) && collisionState != EGameSettingCollisionState::GameSettingBnt)
 	{
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-133.f, 218.f));
 		Slider[1]->isVisible = true;
 		Slider[1]->SetWorldPos(Vector2(133.f, 224.f));
 
-		collisionState = EGameSettingCollisionState::GameSetting;
+		collisionState = EGameSettingCollisionState::GameSettingBnt;
 	}
-	else if (!uiManager->cursur->col->Intersect(gameSettingBnt->col) && collisionState == EGameSettingCollisionState::GameSetting)
+	else if (!uiManager->cursur->col->Intersect(gameSettingBnt->col) && collisionState == EGameSettingCollisionState::GameSettingBnt)
 	{
 		for (int i = 0; i < 2; i++)
 		{
@@ -156,21 +156,22 @@ void SettingMenu::CollideWithMouse()
 		}
 		collisionState = EGameSettingCollisionState::None;
 	}
-	else if (uiManager->cursur->col->Intersect(gameSettingBnt->col) && collisionState == EGameSettingCollisionState::GameSetting)
+	else if (uiManager->cursur->col->Intersect(gameSettingBnt->col) && collisionState == EGameSettingCollisionState::GameSettingBnt)
 	{
-		if (INPUT->KeyPress(VK_LBUTTON)){}
+		if (INPUT->KeyPress(VK_LBUTTON)){
+		}
 
 	}
-	else if (uiManager->cursur->col->Intersect(audioBnt->col) && collisionState != EGameSettingCollisionState::Audio)
+	else if (uiManager->cursur->col->Intersect(audioBnt->col) && collisionState != EGameSettingCollisionState::AudioBnt)
 	{
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-133.f, 128.f));
 		Slider[1]->isVisible = true;
 		Slider[1]->SetWorldPos(Vector2(133.f, 134.f));
 
-		collisionState = EGameSettingCollisionState::Audio;
+		collisionState = EGameSettingCollisionState::AudioBnt;
 	}
-	else if (!uiManager->cursur->col->Intersect(audioBnt->col) && collisionState == EGameSettingCollisionState::Audio)
+	else if (!uiManager->cursur->col->Intersect(audioBnt->col) && collisionState == EGameSettingCollisionState::AudioBnt)
 	{
 		for (int i = 0; i < 2; i++)
 		{
@@ -181,11 +182,15 @@ void SettingMenu::CollideWithMouse()
 
 		collisionState = EGameSettingCollisionState::None;
 	}
-	else if (uiManager->cursur->col->Intersect(audioBnt->col) && collisionState == EGameSettingCollisionState::Audio)
+	else if (uiManager->cursur->col->Intersect(audioBnt->col) && collisionState == EGameSettingCollisionState::AudioBnt)
 	{
-		if (INPUT->KeyPress(VK_LBUTTON)) {}
+		if (INPUT->KeyPress(VK_LBUTTON)) {
+			HUDname = "AudioMenuHUD";
+			hud = uiManager->hudMap[HUDname];
+			menuState = ESettingMenuState::AudioBnt;
+		}
 	}
-	else if (uiManager->cursur->col->Intersect(videoBnt->col) && collisionState != EGameSettingCollisionState::Video)
+	else if (uiManager->cursur->col->Intersect(videoBnt->col) && collisionState != EGameSettingCollisionState::VideoBnt)
 	{
 		cout << 1 << endl;
 		Slider[0]->isVisible = true;
@@ -193,9 +198,9 @@ void SettingMenu::CollideWithMouse()
 		Slider[1]->isVisible = true;
 		Slider[1]->SetWorldPos(Vector2(133.f, 44.f));
 
-		collisionState = EGameSettingCollisionState::Video;
+		collisionState = EGameSettingCollisionState::VideoBnt;
 	}
-	else if (!uiManager->cursur->col->Intersect(videoBnt->col) && collisionState == EGameSettingCollisionState::Video)
+	else if (!uiManager->cursur->col->Intersect(videoBnt->col) && collisionState == EGameSettingCollisionState::VideoBnt)
 	{
 		for (int i = 0; i < 2; i++)
 		{
@@ -206,20 +211,20 @@ void SettingMenu::CollideWithMouse()
 
 		collisionState = EGameSettingCollisionState::None;
 	}
-	else if (uiManager->cursur->col->Intersect(videoBnt->col) && collisionState == EGameSettingCollisionState::Video)
+	else if (uiManager->cursur->col->Intersect(videoBnt->col) && collisionState == EGameSettingCollisionState::VideoBnt)
 	{
 		if (INPUT->KeyPress(VK_LBUTTON)) {}
 	}
-	else if (uiManager->cursur->col->Intersect(keyboardBnt->col) && collisionState != EGameSettingCollisionState::Keyboard)
+	else if (uiManager->cursur->col->Intersect(keyboardBnt->col) && collisionState != EGameSettingCollisionState::KeyboardBnt)
 	{
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-133.f, -50.f));
 		Slider[1]->isVisible = true;
 		Slider[1]->SetWorldPos(Vector2(133.f, -43.f));
 
-		collisionState = EGameSettingCollisionState::Keyboard;
+		collisionState = EGameSettingCollisionState::KeyboardBnt;
 	}
-	else if (!uiManager->cursur->col->Intersect(keyboardBnt->col) && collisionState == EGameSettingCollisionState::Keyboard)
+	else if (!uiManager->cursur->col->Intersect(keyboardBnt->col) && collisionState == EGameSettingCollisionState::KeyboardBnt)
 	{
 		for (int i = 0; i < 2; i++)
 		{
@@ -230,20 +235,20 @@ void SettingMenu::CollideWithMouse()
 
 		collisionState = EGameSettingCollisionState::None;
 	}
-	else if (uiManager->cursur->col->Intersect(keyboardBnt->col) && collisionState == EGameSettingCollisionState::Keyboard)
+	else if (uiManager->cursur->col->Intersect(keyboardBnt->col) && collisionState == EGameSettingCollisionState::KeyboardBnt)
 	{
 		if (INPUT->KeyPress(VK_LBUTTON)) {}
 	}
-	else if (uiManager->cursur->col->Intersect(backBnt->col) && collisionState != EGameSettingCollisionState::Back)
+	else if (uiManager->cursur->col->Intersect(backBnt->col) && collisionState != EGameSettingCollisionState::BackBnt)
 	{
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-133.f, -200.f));
 		Slider[1]->isVisible = true;
 		Slider[1]->SetWorldPos(Vector2(133.f, -193.f));
 
-		collisionState = EGameSettingCollisionState::Back;
+		collisionState = EGameSettingCollisionState::BackBnt;
 	}
-	else if (!uiManager->cursur->col->Intersect(backBnt->col) && collisionState == EGameSettingCollisionState::Back)
+	else if (!uiManager->cursur->col->Intersect(backBnt->col) && collisionState == EGameSettingCollisionState::BackBnt)
 	{
 		for (int i = 0; i < 2; i++)
 		{
@@ -254,7 +259,7 @@ void SettingMenu::CollideWithMouse()
 
 		collisionState = EGameSettingCollisionState::None;
 	}
-	else if (uiManager->cursur->col->Intersect(backBnt->col) && collisionState == EGameSettingCollisionState::Back)
+	else if (uiManager->cursur->col->Intersect(backBnt->col) && collisionState == EGameSettingCollisionState::BackBnt)
 	{
 		if (INPUT->KeyPress(VK_LBUTTON)) {
 			this->gameState = EGameState::Back;
@@ -264,30 +269,28 @@ void SettingMenu::CollideWithMouse()
 
 void SettingMenu::InOutHUDMenu(string HUDname)
 {
-	if (menuState != ESettingMenuState::None)
-	{
-		HUD* hud = uiManager->hudMap[HUDname];
-		if (hud->gameState != EGameState::Back)
-		{
-			bWordFade = true;
-			BlurAlphaValue(0.5f);
+	if (menuState == ESettingMenuState::None) return;
 
-			hud->isVisible = true;
-			if (colorAlpha <= 0.0f)
-			{
-				hud->gameState = EGameState::MainMenu;
-			}
-		}
-		else if (hud->gameState == EGameState::Back)
+	if (hud->gameState != EGameState::Back)
+	{
+		bWordFade = true;
+		BlurAlphaValue(0.5f);
+
+		if (colorAlpha <= 0.0f)
 		{
-			bWordFade = false;
-			hud->isVisible = false;
-			BlurAlphaValue(0.5f);
-			if (colorAlpha >= 0.5f)
-			{
-				hud->gameState = EGameState::None;
-				menuState = ESettingMenuState::None;
-			}
+			hud->isVisible = true;
+			hud->gameState = EGameState::MainMenu;
+		}
+	}
+	else if (hud->gameState == EGameState::Back)
+	{
+		bWordFade = false;
+		hud->isVisible = false;
+		BlurAlphaValue(0.5f);
+		if (colorAlpha >= 0.5f)
+		{
+			hud->gameState = EGameState::None;
+			menuState = ESettingMenuState::None;
 		}
 	}
 }
@@ -299,6 +302,7 @@ void SettingMenu::BlurAlphaValue(float forceValue)
 	{
 		if (colorAlpha >= 0.0f)
 		{
+			cout << colorAlpha << endl;
 			menuTopIm->color.A(colorAlpha);
 			SettingIm->color.A(colorAlpha);
 			Slider[0]->color.A(colorAlpha);

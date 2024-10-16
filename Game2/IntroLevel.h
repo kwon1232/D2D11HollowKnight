@@ -5,6 +5,7 @@
 class ObImage;
 class UIManager;
 class LevelManager;
+class Player;
 
 class MainMenu;
 class GameExitMenu;
@@ -25,6 +26,7 @@ private:
 	ObImage* bg;
 	UIManager* uiManager;
 	LevelManager* levelManager;
+	Player* player;
 
 	MainMenu* mainMenu;
 	GameExitMenu* gameExitMenu;

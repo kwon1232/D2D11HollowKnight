@@ -12,8 +12,8 @@
 
 IntroLevel::IntroLevel()
 {
-	bg = new ObImage(L"Background/wallpaperflare.com_wallpaper.jpg");
-	bg->scale = Vector2(1900.f, 1000.f);
+	bg = new ObImage(L"Menu/MainMenuBG.png");
+	bg->scale = Vector2(2000.f, 1200.f);
 	bg->SetWorldPos(Vector2(0.f, 0.f));
 
 	mainMenu = new MainMenu();
@@ -54,6 +54,7 @@ void IntroLevel::Update()
 	if (!isVisible) return;
 
 	bg->Update();
+
 	mainMenu->Update();
 	gameExitMenu->Update();
 	settingMenu->Update();
@@ -69,6 +70,7 @@ void IntroLevel::Render()
 	if (!isVisible) return;
 
 	bg->Render();
+
 	mainMenu->Render();
 	gameExitMenu->Render();
 	settingMenu->Render();

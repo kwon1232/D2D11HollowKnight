@@ -14,6 +14,16 @@ enum class EGameExitCollisionState
 	None
 };
 
+enum class EGameExitState
+{
+	ContinueBnt,
+	SettingBut,
+	GoMenuBnt,
+	YesBnt,
+	NoBnt,
+	None
+};
+
 class GameExitMenu : public HUD
 {
 public:
@@ -25,9 +35,10 @@ public:
 	virtual void LateUpdate() override;
 
 	// Bnt와 마우스가 충돌한다면 커서 스프라이트 재생
-	virtual void CollideWithMouse();
+	virtual void CollideWithMouse() override;
 
 	EGameExitCollisionState collisionState;
+	EGameExitState menuState;
 
 private:
 	ObImage* menuTopIm;
