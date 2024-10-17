@@ -34,9 +34,9 @@ public:
 	virtual void Render() override;
 	virtual void LateUpdate() override;
 
-	void CollideWithMouse();
+	virtual void CollideWithMouse() override;
 
-	void InOutHUDMenu(string HUDname) override;
+	virtual void InOutHUDMenu(string HUDname) override;
 	virtual void BlurAlphaValue(float forceValue)override;
 private:
 	EGameSettingCollisionState collisionState;

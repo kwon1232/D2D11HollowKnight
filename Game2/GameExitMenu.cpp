@@ -165,6 +165,7 @@ void GameExitMenu::CollideWithMouse()
 {
 	if (uiManager->cursur->col->Intersect(yesBnt->col) && collisionState != EGameExitCollisionState::YesBnt)
 	{
+		SOUND->Play("E_ui_option_click");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-113.f, 50.f));
 		Slider[1]->isVisible = true;
@@ -189,6 +190,7 @@ void GameExitMenu::CollideWithMouse()
 	}
 	else if (uiManager->cursur->col->Intersect(noBnt->col) && collisionState != EGameExitCollisionState::NoBnt)
 	{
+		SOUND->Play("E_ui_option_click");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-113.f, -50.f));
 		Slider[1]->isVisible = true;

@@ -137,13 +137,14 @@ void SettingMenu::LateUpdate()
 
 void SettingMenu::CollideWithMouse()
 {
+	if (menuState != ESettingMenuState::None) return;
 	if (uiManager->cursur->col->Intersect(gameSettingBnt->col) && collisionState != EGameSettingCollisionState::GameSettingBnt)
 	{
+		SOUND->Play("E_ui_option_click");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-133.f, 218.f));
 		Slider[1]->isVisible = true;
 		Slider[1]->SetWorldPos(Vector2(133.f, 224.f));
-
 		collisionState = EGameSettingCollisionState::GameSettingBnt;
 	}
 	else if (!uiManager->cursur->col->Intersect(gameSettingBnt->col) && collisionState == EGameSettingCollisionState::GameSettingBnt)
@@ -164,6 +165,7 @@ void SettingMenu::CollideWithMouse()
 	}
 	else if (uiManager->cursur->col->Intersect(audioBnt->col) && collisionState != EGameSettingCollisionState::AudioBnt)
 	{
+		SOUND->Play("E_ui_option_click");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-133.f, 128.f));
 		Slider[1]->isVisible = true;
@@ -192,7 +194,7 @@ void SettingMenu::CollideWithMouse()
 	}
 	else if (uiManager->cursur->col->Intersect(videoBnt->col) && collisionState != EGameSettingCollisionState::VideoBnt)
 	{
-		cout << 1 << endl;
+		SOUND->Play("E_ui_option_click");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-133.f, 38.f));
 		Slider[1]->isVisible = true;
@@ -217,6 +219,7 @@ void SettingMenu::CollideWithMouse()
 	}
 	else if (uiManager->cursur->col->Intersect(keyboardBnt->col) && collisionState != EGameSettingCollisionState::KeyboardBnt)
 	{
+		SOUND->Play("E_ui_option_click");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-133.f, -50.f));
 		Slider[1]->isVisible = true;
@@ -241,6 +244,7 @@ void SettingMenu::CollideWithMouse()
 	}
 	else if (uiManager->cursur->col->Intersect(backBnt->col) && collisionState != EGameSettingCollisionState::BackBnt)
 	{
+		SOUND->Play("E_ui_option_click");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-133.f, -200.f));
 		Slider[1]->isVisible = true;
@@ -278,6 +282,7 @@ void SettingMenu::InOutHUDMenu(string HUDname)
 
 		if (colorAlpha <= 0.0f)
 		{
+			isVisible = false;
 			hud->isVisible = true;
 			hud->gameState = EGameState::MainMenu;
 		}
@@ -302,7 +307,6 @@ void SettingMenu::BlurAlphaValue(float forceValue)
 	{
 		if (colorAlpha >= 0.0f)
 		{
-			cout << colorAlpha << endl;
 			menuTopIm->color.A(colorAlpha);
 			SettingIm->color.A(colorAlpha);
 			Slider[0]->color.A(colorAlpha);

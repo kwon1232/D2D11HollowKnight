@@ -53,6 +53,10 @@ void MainMenuLevel::Update()
 
 void MainMenuLevel::LateUpdate()
 {
+	introLevel->LateUpdate();
+	villageLevel->LateUpdate();
+	uiManager->LateUpdate();
+	levelManager->LateUpdate();
 }
 
 void MainMenuLevel::Render()

@@ -24,7 +24,7 @@ void Main::Update()
 
 void Main::LateUpdate()
 {
-
+	mainMenuLevel->LateUpdate();
 }
 
 void Main::Render()

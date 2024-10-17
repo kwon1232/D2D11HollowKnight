@@ -7,12 +7,17 @@ class Sliderbutton;
 
 enum class EAudioCollisionState
 {
+	DefaultValBnt,
 	BackBnt,
+	SliderAll,
+	SliderMusic,
+	SliderEffect,
 	None
 };
 
 enum class EAudioMenuState
 {
+	DefaultValBnt,
 	BackBnt,
 	None
 };
@@ -27,7 +32,7 @@ public:
 	virtual void Render() override;
 	virtual void LateUpdate() override;
 
-	void CollideWithMouse();
+	virtual void CollideWithMouse() override;
 
 	virtual void InOutHUDMenu(string HUDname) override;
 	virtual void BlurAlphaValue(float forceValue) override;
@@ -36,6 +41,7 @@ public:
 private:
 
 	EAudioMenuState menuState;
+	EAudioCollisionState collisionState;
 
 	Sliderbutton* sliderbutton[3];
 
@@ -43,10 +49,10 @@ private:
 	ObImage* menuTopIm;
 
 	ObImage* totalVolumeTxtIm;
-	ObImage* SoundEffectsVolumeTxtIm;
 	ObImage* MusicVolumeTxtIm;
+	ObImage* SoundEffectsVolumeTxtIm;
 
-	Button* backBnt;
 	Button* defaultValBnt;
+	Button* backBnt;
 };
 

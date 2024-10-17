@@ -12,6 +12,10 @@
 
 IntroLevel::IntroLevel()
 {
+	SOUND->AddSound("Title.wav", "M_Title", true);
+	SOUND->Play("M_Title");
+	SOUND->AddSound("ui_option_click.wav", "E_ui_option_click", false);
+
 	bg = new ObImage(L"Menu/MainMenuBG.png");
 	bg->scale = Vector2(2000.f, 1200.f);
 	bg->SetWorldPos(Vector2(0.f, 0.f));
@@ -20,7 +24,6 @@ IntroLevel::IntroLevel()
 	gameExitMenu = new GameExitMenu();
 	settingMenu = new SettingMenu();
 	audioMenu = new AudioMenu();
-
 	isVisible = true;
 }
 
@@ -63,6 +66,7 @@ void IntroLevel::Update()
 
 void IntroLevel::LateUpdate()
 {
+	audioMenu->LateUpdate();
 }
 
 void IntroLevel::Render()
