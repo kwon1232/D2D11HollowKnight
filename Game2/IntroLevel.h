@@ -23,7 +23,7 @@ public:
 	virtual void ResizeScreen() override;
 
 private:
-	ObImage* bg;
+	class BlurImage* bg;
 	UIManager* uiManager;
 	LevelManager* levelManager;
 	Player* player;

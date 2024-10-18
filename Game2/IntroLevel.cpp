@@ -16,7 +16,7 @@ IntroLevel::IntroLevel()
 	SOUND->Play("M_Title");
 	SOUND->AddSound("ui_change_selection.wav", "E_ui_change_selection", false);
 
-	bg = new ObImage(L"Menu/MainMenuBG.png");
+	bg = new BlurImage(L"Menu/MainMenuBG.png");
 	bg->scale = Vector2(2000.f, 1200.f);	
 	bg->SetWorldPos(Vector2(0.f, 0.f));
 
