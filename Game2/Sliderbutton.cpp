@@ -121,15 +121,15 @@ void Sliderbutton::InitSliderPos()
 	numIm[5]->isVisible = true;
 	if (soundType == ESoundType::All)
 	{
-		SOUND->SetAllVolume(0.5f);
+		SOUND->SetAllVolume(1.f);
 	}
 	else if (soundType == ESoundType::Music)
 	{
-		SOUND->SetMusicVolume(0.5f);
+		SOUND->SetMusicVolume(1.f);
 	}
 	else if (soundType == ESoundType::Effect)
 	{
-		SOUND->SetEffectVolume(0.5f);
+		SOUND->SetEffectVolume(1.f);
 	}
 }
 

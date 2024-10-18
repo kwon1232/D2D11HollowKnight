@@ -171,7 +171,7 @@ void AudioMenu::CollideWithMouse()
 	if (menuState != EAudioMenuState::None) return;
 	if (uiManager->cursur->col->Intersect(defaultValBnt->col) && collisionState != EAudioCollisionState::DefaultValBnt)
 	{
-		SOUND->Play("E_ui_option_click");
+		SOUND->Play("E_ui_change_selection");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-290.f, -260.f));
 		Slider[1]->isVisible = true;
@@ -201,7 +201,7 @@ void AudioMenu::CollideWithMouse()
 	}
 	else if (uiManager->cursur->col->Intersect(backBnt->col) && collisionState != EAudioCollisionState::BackBnt)
 	{
-		SOUND->Play("E_ui_option_click");
+		SOUND->Play("E_ui_change_selection");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-290.f, -360.f));
 		Slider[1]->isVisible = true;
@@ -229,7 +229,7 @@ void AudioMenu::CollideWithMouse()
 	}
 	else if (uiManager->cursur->col->Intersect(sliderbutton[0]->col) && collisionState != EAudioCollisionState::SliderAll)
 	{
-		SOUND->Play("E_ui_option_click");
+		SOUND->Play("E_ui_change_selection");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-613.f, 220.f));
 		Slider[1]->isVisible = true;
@@ -250,7 +250,7 @@ void AudioMenu::CollideWithMouse()
 	}
 	else if (uiManager->cursur->col->Intersect(sliderbutton[1]->col) && collisionState != EAudioCollisionState::SliderEffect)
 	{
-		SOUND->Play("E_ui_option_click");
+		SOUND->Play("E_ui_change_selection");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-613.f, 70.f));
 		Slider[1]->isVisible = true;
@@ -271,7 +271,7 @@ void AudioMenu::CollideWithMouse()
 	}
 	else if (uiManager->cursur->col->Intersect(sliderbutton[2]->col) && collisionState != EAudioCollisionState::SliderMusic)
 	{
-		SOUND->Play("E_ui_option_click");
+		SOUND->Play("E_ui_change_selection");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-613.f, -84.f));
 		Slider[1]->isVisible = true;

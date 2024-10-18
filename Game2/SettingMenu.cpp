@@ -140,7 +140,7 @@ void SettingMenu::CollideWithMouse()
 	if (menuState != ESettingMenuState::None) return;
 	if (uiManager->cursur->col->Intersect(gameSettingBnt->col) && collisionState != EGameSettingCollisionState::GameSettingBnt)
 	{
-		SOUND->Play("E_ui_option_click");
+		SOUND->Play("E_ui_change_selection");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-133.f, 218.f));
 		Slider[1]->isVisible = true;
@@ -165,7 +165,7 @@ void SettingMenu::CollideWithMouse()
 	}
 	else if (uiManager->cursur->col->Intersect(audioBnt->col) && collisionState != EGameSettingCollisionState::AudioBnt)
 	{
-		SOUND->Play("E_ui_option_click");
+		SOUND->Play("E_ui_change_selection");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-133.f, 128.f));
 		Slider[1]->isVisible = true;
@@ -194,7 +194,7 @@ void SettingMenu::CollideWithMouse()
 	}
 	else if (uiManager->cursur->col->Intersect(videoBnt->col) && collisionState != EGameSettingCollisionState::VideoBnt)
 	{
-		SOUND->Play("E_ui_option_click");
+		SOUND->Play("E_ui_change_selection");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-133.f, 38.f));
 		Slider[1]->isVisible = true;
@@ -219,7 +219,7 @@ void SettingMenu::CollideWithMouse()
 	}
 	else if (uiManager->cursur->col->Intersect(keyboardBnt->col) && collisionState != EGameSettingCollisionState::KeyboardBnt)
 	{
-		SOUND->Play("E_ui_option_click");
+		SOUND->Play("E_ui_change_selection");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-133.f, -50.f));
 		Slider[1]->isVisible = true;
@@ -244,7 +244,7 @@ void SettingMenu::CollideWithMouse()
 	}
 	else if (uiManager->cursur->col->Intersect(backBnt->col) && collisionState != EGameSettingCollisionState::BackBnt)
 	{
-		SOUND->Play("E_ui_option_click");
+		SOUND->Play("E_ui_change_selection");
 		Slider[0]->isVisible = true;
 		Slider[0]->SetWorldPos(Vector2(-133.f, -200.f));
 		Slider[1]->isVisible = true;
