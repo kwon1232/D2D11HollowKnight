@@ -62,6 +62,7 @@
     <ClCompile Include="Sliderbutton.cpp">
       <Filter>UI\Button</Filter>
     </ClCompile>
+    <ClCompile Include="BluerImage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h" />
@@ -127,6 +128,7 @@
     <ClInclude Include="Sliderbutton.h">
       <Filter>UI\Button</Filter>
     </ClInclude>
+    <ClInclude Include="BluerImage.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Managers">

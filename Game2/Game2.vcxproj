@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseCharacter.h" />
+    <ClInclude Include="BluerImage.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="Cursur.h" />
     <ClInclude Include="Fade.h" />
@@ -45,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseCharacter.cpp" />
+    <ClCompile Include="BluerImage.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Cursur.cpp" />
     <ClCompile Include="Fade.cpp" />
