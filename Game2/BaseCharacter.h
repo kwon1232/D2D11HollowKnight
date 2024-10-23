@@ -1,22 +1,17 @@
 #pragma once
 class ObRect;
 
-
-enum Direction
-{
-	L,
-	R
-};
-
-
 class BaseCharacter
 {
 public:
+	BaseCharacter();
+	virtual ~BaseCharacter();
+	virtual void Init();
+	virtual void Release();
+	virtual void Update();
+	virtual void LateUpdate();
+	virtual void Render();
 
-private:
 	ObRect* col;
-	Direction dir;
-
-
 };
 

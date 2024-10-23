@@ -3,7 +3,6 @@
 #include "LevelManager.h"
 #include "IntroLevel.h"
 #include "VillageLevel.h"
-#include "ProfileLevel.h"
 #include "MainMenuLevel.h"
 
 MainMenuLevel::MainMenuLevel()
@@ -12,7 +11,6 @@ MainMenuLevel::MainMenuLevel()
 	levelManager = new LevelManager();
 	introLevel = new IntroLevel();
 	villageLevel = new VillageLevel();
-	profileLevel = new ProfileLevel();
 }
 
 MainMenuLevel::~MainMenuLevel()
@@ -28,12 +26,10 @@ void MainMenuLevel::Init(Player* player)
 {
 	this->player = player;
 	introLevel->Init(this->player, this->uiManager, this->levelManager);
-	profileLevel->Init(this->player, uiManager, levelManager);
 	villageLevel->Init(this->player, uiManager, levelManager);
 
 	levelManager->AddLevel("IntroLevel", introLevel);
 	levelManager->AddLevel("VillageLevel", villageLevel);
-	levelManager->AddLevel("ProfileLevel", profileLevel);
 }
 
 void MainMenuLevel::Release()

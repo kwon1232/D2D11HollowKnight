@@ -151,8 +151,9 @@ void MainMenu::CollideWithMouse()
 		{
 			if (INPUT->KeyPress(VK_LBUTTON))
 			{
-				levelManager->levelState = ELevelState::Change;
-				ClickGameStart();
+				menuState = EMainMenuState::GameStartBnt;
+				HUDname = "ProfileMenuHUD";
+				hud = uiManager->hudMap[HUDname];
 			}
 		} else if (uiManager->cursur->col->Intersect(gameSettingBnt->col) && collisionState != EMainMenuCollisionState::GameSettingBnt)
 		{

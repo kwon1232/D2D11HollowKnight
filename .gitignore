@@ -107,3 +107,7 @@ Game2/RCa18908
 .vs/2DFrameWork/FileContentIndex/7dc29c3b-03d9-4393-8bd2-fd909dd45767.vsidx
 .vs/2DFrameWork/FileContentIndex/11360ea3-0e22-4c91-9eab-8ad3aacd378e.vsidx
 *.ipch
+*.vsidx
+.vs/2DFrameWork/v17/Browse.VC.opendb
+.vs/2DFrameWork/v17/Browse.VC.db-wal
+.vs/2DFrameWork/v17/Browse.VC.db-shm

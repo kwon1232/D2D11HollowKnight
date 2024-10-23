@@ -15,6 +15,8 @@ public:
 	virtual void LateUpdate();
 	virtual void Render();
 
+	void SetColWorldPosY(float val) { col->SetWorldPosY(val); }
+
 	ObRect* col;
 	ObImage* buttonIm;
 };

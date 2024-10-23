@@ -17,12 +17,14 @@ public:
 	void InOutHUDMenu(string HUDname) override;
 	virtual void BlurAlphaValue(float forceValue) override;
 
+	
+
 private:
-	ObImage* titleTop;
+	ObImage* titleTop;          
 	ObImage* profileText;
 	ProfileButton* saveProfile1;
 	ProfileButton* saveProfile2;
 	ProfileButton* saveProfile3;
-	ProfileButton* saveProfile4;
+	class Button* backBnt;
 };
 

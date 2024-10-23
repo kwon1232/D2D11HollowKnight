@@ -23,9 +23,6 @@
     <ClCompile Include="BaseCharacter.cpp">
       <Filter>Character</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Character</Filter>
-    </ClCompile>
     <ClCompile Include="Wall.cpp">
       <Filter>Levels\Objects</Filter>
     </ClCompile>
@@ -38,31 +35,43 @@
     <ClCompile Include="Button.cpp">
       <Filter>UI\Button</Filter>
     </ClCompile>
-    <ClCompile Include="MainMenu.cpp">
-      <Filter>UI\Menus</Filter>
-    </ClCompile>
     <ClCompile Include="VillageLevel.cpp">
       <Filter>Levels\Village</Filter>
     </ClCompile>
-    <ClCompile Include="ProfileLevel.cpp">
-      <Filter>Levels\Profile</Filter>
-    </ClCompile>
-    <ClCompile Include="GameExitMenu.cpp">
-      <Filter>UI\Menus</Filter>
-    </ClCompile>
     <ClCompile Include="HUD.cpp">
       <Filter>UI</Filter>
-    </ClCompile>
-    <ClCompile Include="SettingMenu.cpp">
-      <Filter>UI\Menus</Filter>
-    </ClCompile>
-    <ClCompile Include="AudioMenu.cpp">
-      <Filter>UI\Menus</Filter>
     </ClCompile>
     <ClCompile Include="Sliderbutton.cpp">
       <Filter>UI\Button</Filter>
     </ClCompile>
     <ClCompile Include="BluerImage.cpp" />
+    <ClCompile Include="ProfileButton.cpp">
+      <Filter>UI\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioMenu.cpp">
+      <Filter>UI\Menus\MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="GameExitMenu.cpp">
+      <Filter>UI\Menus\MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>UI\Menus\MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingMenu.cpp">
+      <Filter>UI\Menus\MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfileMenu.cpp">
+      <Filter>UI\Menus\MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Character\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePlayDataManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Character\Player\Inventory</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h" />
@@ -88,9 +97,6 @@
     <ClInclude Include="BaseCharacter.h">
       <Filter>Character</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Character</Filter>
-    </ClInclude>
     <ClInclude Include="Wall.h">
       <Filter>Levels\Objects</Filter>
     </ClInclude>
@@ -101,26 +107,11 @@
       <Filter>Levels\MenuLevels</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />
-    <ClInclude Include="MainMenu.h">
-      <Filter>UI\Menus</Filter>
-    </ClInclude>
     <ClInclude Include="VillageLevel.h">
       <Filter>Levels\Village</Filter>
     </ClInclude>
-    <ClInclude Include="ProfileLevel.h">
-      <Filter>Levels\Profile</Filter>
-    </ClInclude>
-    <ClInclude Include="GameExitMenu.h">
-      <Filter>UI\Menus</Filter>
-    </ClInclude>
     <ClInclude Include="HUD.h">
       <Filter>UI</Filter>
-    </ClInclude>
-    <ClInclude Include="SettingMenu.h">
-      <Filter>UI\Menus</Filter>
-    </ClInclude>
-    <ClInclude Include="AudioMenu.h">
-      <Filter>UI\Menus</Filter>
     </ClInclude>
     <ClInclude Include="Button.h">
       <Filter>UI\Button</Filter>
@@ -129,6 +120,33 @@
       <Filter>UI\Button</Filter>
     </ClInclude>
     <ClInclude Include="BluerImage.h" />
+    <ClInclude Include="ProfileButton.h">
+      <Filter>UI\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioMenu.h">
+      <Filter>UI\Menus\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="GameExitMenu.h">
+      <Filter>UI\Menus\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>UI\Menus\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingMenu.h">
+      <Filter>UI\Menus\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfileMenu.h">
+      <Filter>UI\Menus\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Character\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePlayDataManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>Character\Player\Inventory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Managers">
@@ -161,11 +179,23 @@
     <Filter Include="Levels\Village">
       <UniqueIdentifier>{05c411ca-f25a-4192-9ca8-1cbfa56de384}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Levels\Profile">
-      <UniqueIdentifier>{97fa7c7a-c12f-4c62-9d8f-7e56446c5e9b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="UI\Menus">
       <UniqueIdentifier>{0bd134c7-b52e-4b64-8995-6adf338d5e02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Menus\MainMenu">
+      <UniqueIdentifier>{97fa7c7a-c12f-4c62-9d8f-7e56446c5e9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Player">
+      <UniqueIdentifier>{8fd14865-22fd-407d-8eac-bb0ee52e2be6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\NPC">
+      <UniqueIdentifier>{6a636d03-c439-4b7e-9660-da9344b884ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\NewFilter1">
+      <UniqueIdentifier>{1d1d5891-6209-473b-9375-8e16a3418205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\Player\Inventory">
+      <UniqueIdentifier>{6cec601f-bdc5-433a-bd51-15526e4f982e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
