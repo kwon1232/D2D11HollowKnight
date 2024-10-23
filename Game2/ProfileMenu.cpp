@@ -17,15 +17,18 @@ ProfileMenu::ProfileMenu()
 	profileText = new ObImage(L"Menu/Profile/SelectProfile.png");
 	profileText->scale = Vector2(550.f, 160.f);
 	profileText->SetWorldPos(Vector2(-20.f,385.f));
-	saveProfile1 = new ProfileButton(L"Menu/Profile/Profile01BgIm.png");
+	// ToDO : 파일 입출력으로 정보 읽어오는 내부함수 만들어주기 && 숫자 이미지 넣어주기
+	saveProfile1 = new ProfileButton(L"Menu/Profile/ProfileNum1.png", 1);
 	saveProfile1->SetColWorldPosY(200.f);
-	saveProfile2 = new ProfileButton(L"Menu/Profile/Profile02BgIm.png");
+	saveProfile2 = new ProfileButton(L"Menu/Profile/ProfileNum2.png", 2);
 	saveProfile2->SetColWorldPosY(20.f);
-	saveProfile3 = new ProfileButton(L"Menu/Profile/Profile01BgIm.png");
+	saveProfile3 = new ProfileButton(L"Menu/Profile/ProfileNum3.png", 3);
 	saveProfile3->SetColWorldPosY(-180.f);
+	// -- 여기까지
 	backBnt = new Button(L"Menu/Text/Back.png");
 	backBnt->col->scale = Vector2(220.f, 100.f);
 	backBnt->SetColWorldPosY(-360.f);
+
 
 	for (int i = 0; i < 2; i++)
 	{
